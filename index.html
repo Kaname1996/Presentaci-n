@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Operaciones IT - Jonathan Salgado</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+    <style>
+        body { background: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
+        #book { width: 900px; height: 600px; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+        .page { width: 450px; height: 600px; background: #fdfdfd; border: 1px solid #ddd; padding: 30px; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Estilos de Portada */
+        .cover { background: #003366; color: white; text-align: center; display: flex; flex-direction: column; justify-content: center; border: none; }
+        .cover h1 { font-size: 2.5em; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; }
+        
+        /* Contenido */
+        h2 { color: #003366; border-left: 5px solid #ffcc00; padding-left: 10px; }
+        .code-block { background: #eee; padding: 10px; font-family: monospace; font-size: 0.9em; border-radius: 5px; }
+        .page-number { position: absolute; bottom: 10px; font-size: 0.8em; color: #777; width: 100%; text-align: center; left: 0; }
+    </style>
+</head>
+<body>
+
+<div id="book">
+    <div class="page cover">
+        <h1>MANUAL DE OPERACIONES</h1>
+        <p>Infraestructura & Soporte Industrial</p>
+        <hr style="width: 50%;">
+        <p>Ing. Jonathan Salgado [cite: 3]</p>
+    </div>
+
+    <div class="page">
+        <h2>1. Gestión de Servidores</h2>
+        <p>Con 9 años de experiencia en IT , la administración de <strong>SQL Server</strong> y <strong>Active Directory</strong> es fundamental para la continuidad operativa[cite: 49].</p>
+        <p>Protocolos clave:</p>
+        <ul>
+            <li>Backups diarios automáticos[cite: 56].</li>
+            <li>Gestión de permisos de dominio[cite: 49].</li>
+            <li>Monitoreo de recursos de hardware.</li>
+        </ul>
+        <div class="page-number">Página 1</div>
+    </div>
+
+    <div class="page">
+        <h2>2. Infraestructura de Red</h2>
+        <p>Implementación y diagnóstico de redes físicas y lógicas utilizando equipos <strong>SonicWall</strong> y switches industriales[cite: 51].</p>
+        <div class="code-block">
+            # Configuración básica VPN<br>
+            interface tunnel 1<br>
+            ip address 10.0.0.1 255.255.255.0
+        </div>
+        <p>Experiencia en conectividad VPN y despliegue mediante <strong>SCCM</strong>[cite: 37, 39].</p>
+        <div class="page-number">Página 2</div>
+    </div>
+
+    <div class="page">
+        <h2>3. Proyectos Especiales</h2>
+        <p>Responsable de la estructuración de nuevas plantas y análisis de requerimientos técnicos para infraestructura[cite: 52].</p>
+        <ul>
+            <li>Instalación de sistemas CCTV[cite: 54].</li>
+            <li>Configuración de VoIP y PBX[cite: 51, 55].</li>
+            <li>Gestión de proveedores y presupuestos[cite: 53].</li>
+        </ul>
+        <div class="page-number">Página 3</div>
+    </div>
+
+    <div class="page cover">
+        <h2>Contacto Profesional</h2>
+        <p>Mexicali, B.C. </p>
+        <p>Tel: (686) 151-8152 [cite: 6]</p>
+        <p>jonathanuniversidad@outlook.com [cite: 8]</p>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#book").turn({
+            width: 900,
+            height: 600,
+            autoCenter: true,
+            gradients: true, // Agrega sombras al girar
+            acceleration: true
+        });
+    });
+</script>
+
+</body>
+</html>
